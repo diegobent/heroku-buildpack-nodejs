@@ -37,11 +37,6 @@ write_profile() {
   local build_dir="$2"
   mkdir -p $build_dir/.profile.d
   cp $bp_dir/profile/* $build_dir/.profile.d/
-
-  for e in $(ls $build_dir/.profile.d); do
-    echo "CCCCC $e"
-    :
-  done
 }
 
 write_export() {
