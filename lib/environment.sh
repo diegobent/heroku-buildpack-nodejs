@@ -31,8 +31,8 @@ export_env_dir() {
     fi
   fi
 
-  export OCI_LIB_DIR1=$build_dir/_libs/instantclient
-  export OCI_INC_DIR1=$build_dir/_libs/instantclient/sdk/include
+  export OCI_LIB_DIR1=$BUILD_DIR/_libs/instantclient
+  export OCI_INC_DIR1=$BUILD_DIR/_libs/instantclient/sdk/include
 
   echo $OCI_INC_DIR
   echo $OCI_LIB_DIR
