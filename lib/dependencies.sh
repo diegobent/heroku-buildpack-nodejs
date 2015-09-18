@@ -1,9 +1,6 @@
 install_node_modules() {
   local build_dir=${1:-}
 
-  export OCI_LIB_DIR=$build_dir/_libs/instantclient
-  export OCI_INC_DIR=$build_dir/_libs/instantclient/sdk/include
-
   if [ -e $build_dir/package.json ]; then
     cd $build_dir
     echo "Pruning any extraneous modules"
