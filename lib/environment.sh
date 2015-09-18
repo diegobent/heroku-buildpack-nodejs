@@ -24,8 +24,8 @@ export_env_dir() {
     local blacklist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
     if [ -d "$env_dir" ]; then
       for e in $(ls $env_dir); do
-        echo 'A'.$env_dir/$e
-        echo 'B'.$(cat $env_dir/$e)
+        echo "AXX$env_dir/$e"
+        echo "BXX$(cat $env_dir/$e)"
 
         echo "$e" | grep -E "$whitelist_regex" | grep -qvE "$blacklist_regex" &&
         export "$e=$(cat $env_dir/$e)"

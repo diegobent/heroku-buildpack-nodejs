@@ -1,8 +1,9 @@
 install_node_modules() {
   local build_dir=${1:-}
-
-  export OCI_LIB_DIR=$build_dir/_libs/instantclient
-  export OCI_INC_DIR=$build_dir/_libs/instantclient/sdk/include
+  echo "AAA $build_dir"
+  echo "BBB $BUILD_DIR"
+  #export OCI_LIB_DIR=$build_dir/_libs/instantclient
+  #export OCI_INC_DIR=$build_dir/_libs/instantclient/sdk/include
   echo $OCI_LIB_DIR
   echo $OCI_INC_DIR
 
