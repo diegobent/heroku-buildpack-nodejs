@@ -1,5 +1,6 @@
 install_node_modules() {
   local build_dir=${1:-}
+  echo "AAAAAAAAAAA $OCI_LIB_DIR"
 
   if [ -e $build_dir/package.json ]; then
     cd $build_dir
