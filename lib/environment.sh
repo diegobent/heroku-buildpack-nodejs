@@ -18,6 +18,7 @@ list_node_config() {
 }
 
 export_env_dir() {
+  echo "OOOOOOO $BUILD_DIR"
   local env_dir=$1
   if [ -d "$env_dir" ]; then
     local whitelist_regex=${2:-''}
@@ -29,6 +30,8 @@ export_env_dir() {
         echo "$e" | grep -E "$whitelist_regex" | grep -qvE "$blacklist_regex" &&
         export "$e=$(cat $env_dir/$e)"
         :
+
+        echo "PIPPO $($e)"
       done
     fi
   fi
