@@ -1,6 +1,10 @@
 install_node_modules() {
   local build_dir=${1:-}
-  echo "AAAAAAAAAAA $OCI_LIB_DIR"
+
+  export OCI_LIB_DIR=$build_dir/instantclient
+  export OCI_INC_DIR=$build_dir/instantclient/sdk/include
+  echo $OCI_LIB_DIR
+  echo $OCI_INC_DIR
 
   if [ -e $build_dir/package.json ]; then
     cd $build_dir
