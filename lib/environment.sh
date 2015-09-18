@@ -18,14 +18,14 @@ list_node_config() {
 }
 
 export_env_dir() {
-  echo "OOOOOOO $BUILD_DIR"
   local env_dir=$1
   if [ -d "$env_dir" ]; then
     local whitelist_regex=${2:-''}
     local blacklist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
     if [ -d "$env_dir" ]; then
       for e in $(ls $env_dir); do
-        echo "XXX $(cat $env_dir/$e)"
+        echo "1) $env_dir >> $e >>"
+        echo "2) cat $env_dir/$e"
 
         echo "$e" | grep -E "$whitelist_regex" | grep -qvE "$blacklist_regex" &&
         export "$e=$(cat $env_dir/$e)"
