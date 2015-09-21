@@ -20,8 +20,8 @@ BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 #echo "env... $ENV_DIR"
 #echo "bp... $BP_DIR"
 
-export OCI_LIB_DIR=$BUILD_DIR/_libs/instantclient
-export OCI_INC_DIR=$BUILD_DIR/_libs/instantclient/sdk/include
+export OCI_LIB_DIR=$BUILD_DIR/_libs/OracleInstantClient/linux
+export OCI_INC_DIR=$BUILD_DIR/_libs/OracleInstantClient/linux/sdk/include
 
 mkdir -p "$BUILD_DIR/.heroku/node/"
 cd $BUILD_DIR
